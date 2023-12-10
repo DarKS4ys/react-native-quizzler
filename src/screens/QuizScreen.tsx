@@ -26,6 +26,21 @@ import RippleButton from '../components/RippleButton';
         options: ['Mars', 'Jupiter', 'Venus', 'Saturn'],
         correctAnswer: 'Mars',
       },
+      {
+        text: 'What is the capital city of Turkey?',
+        options: ['Istanbul', 'Ankara', 'Izmir', 'Antalya'],
+        correctAnswer: 'Ankara',
+      },
+      {
+        text: 'Which element has the chemical symbol "O"?',
+        options: ['Oxygen', 'Gold', 'Silver', 'Carbon'],
+        correctAnswer: 'Oxygen',
+      },
+      {
+        text: 'What is the capital of Japan?',
+        options: ['Beijing', 'Seoul', 'Tokyo', 'Bangkok'],
+        correctAnswer: 'Tokyo',
+      },
     ];
 
     useEffect(() => {

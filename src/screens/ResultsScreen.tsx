@@ -11,6 +11,19 @@ export default function ResultsScreen({ navigation, route }: { route: any, navig
 
   const completion = ((correctCount + incorrectCount) / Totalquestions) * 100;
 
+  useEffect(() => {
+    const handleBackButton = () => {
+      navigation.navigate('Home');
+      return true; // Prevent default behavior (exiting the app)
+    };
+
+    BackHandler.addEventListener('hardwareBackPress', handleBackButton);
+
+    return () => {
+      BackHandler.removeEventListener('hardwareBackPress', handleBackButton);
+    };
+  }, [navigation]);
+
   return (
     <SafeAreaView className='p-8 flex-1 justify-center items-center w-full gap-y-8'>
       <Text className='font-medium'>{userName}</Text>

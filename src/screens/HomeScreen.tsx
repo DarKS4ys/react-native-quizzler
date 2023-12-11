@@ -25,7 +25,7 @@ export default function HomeScreen({ navigation }: { navigation: any }) {
   return (
     <SafeAreaView className="flex-1 items-center justify-center p-4 gap-y-4">
       <Text className="text-3xl">
-      <Text className="font-bold text-purple-600">Quizzler</Text>'a Hoşgeldin!
+      <Text className="font-bold text-purple-600">Quizzaler</Text>'a Hoşgeldin!
       </Text>
       <TextInput
         placeholder="Enter your name"

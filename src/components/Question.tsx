@@ -89,7 +89,7 @@ export default function Question({
           </View>
         </View>
         <Text className="text-purple-500 font-medium">
-          Question {questionIndex + 1} / {totalQuestions}
+          Soru {questionIndex + 1} / {totalQuestions}
         </Text>
         <Text className="text-xl font-bold pt-4">{currentQuestion.text}</Text>
       </View>

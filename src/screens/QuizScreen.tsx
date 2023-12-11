@@ -17,29 +17,44 @@ import RippleButton from '../components/RippleButton';
 
     const questions = [
       {
-        text: 'What is the capital of France?',
-        options: ['Berlin', 'Madrid', 'Paris', 'Rome'],
-        correctAnswer: 'Paris',
-      },
-      {
-        text: 'Which planet is known as the Red Planet?',
-        options: ['Mars', 'Jupiter', 'Venus', 'Saturn'],
-        correctAnswer: 'Mars',
-      },
-      {
-        text: 'What is the capital city of Turkey?',
-        options: ['Istanbul', 'Ankara', 'Izmir', 'Antalya'],
+        text: 'Türkiyenin başkenti nedir?',
+        options: ['Ankra', 'İstanbul', 'Ankara', 'Trabzon'],
         correctAnswer: 'Ankara',
       },
       {
-        text: 'Which element has the chemical symbol "O"?',
-        options: ['Oxygen', 'Gold', 'Silver', 'Carbon'],
-        correctAnswer: 'Oxygen',
+        text: 'Siviller hangi dili konuşur?',
+        options: ['Türkçe', 'Sivilce', 'İngilizce', 'Almanca'],
+        correctAnswer: 'Sivilce',
       },
       {
-        text: 'What is the capital of Japan?',
-        options: ['Beijing', 'Seoul', 'Tokyo', 'Bangkok'],
-        correctAnswer: 'Tokyo',
+        text: 'İneklerin sevmediği element/molekül?',
+        options: ['AZ-OT', 'CO₂', 'CN', 'C₁₀H₁₅N'],
+        correctAnswer: 'AZ-OT',
+      },
+      {
+        text: 'İshal olmuş böceğe ne denir?',
+        options: ['İshal Böcek', 'Osuruk Böceği', 'Memati', 'Cırcır Böceği'],
+        correctAnswer: 'Cırcır Böceği',
+      },
+      {
+        text: 'Dünyanın en tehlikeli bombası?',
+        options: ['Haktan', 'Çar Bombası', 'Megaton', 'Araplar'],
+        correctAnswer: 'Araplar',
+      },
+      {
+        text: 'Zenci kutuplara giderse ne olur?',
+        options: ['Beyazlar', 'Çikolatalı Dondurma', 'Michael Jackson', 'Bilmiyom'],
+        correctAnswer: 'Çikolatalı Dondurma',
+      },
+      {
+        text: 'Küçük su birikintisine ne denir?',
+        options: ['Batak', 'Su birikintisi', 'Gölcük', 'Sucuk',],
+        correctAnswer: 'Sucuk',
+      },
+      {
+        text: 'Örümcek adam ağ atamıyormuş neden?',
+        options: ['Yorulmuş', 'Ağı bitmiş', 'Ağ bağlantısı kopmuş', 'Canı istemiyomuş'],
+        correctAnswer: 'Ağ bağlantısı kopmuş',
       },
     ];
 
@@ -56,15 +71,15 @@ import RippleButton from '../components/RippleButton';
     
       const backButtonHandler = () => {
         Alert.alert(
-          'Leave Quiz',
-          'Are you sure you want to quit? You won\'t be able to go back and try again!',
+          'Yarıda bırakmak mı istiyorsun?',
+          'Erkenden bitirmek istediğine emin misin? Geriye dönüp kaldığın yerden devam edemezsin!',
           [
             {
-              text: 'Cancel',
+              text: 'İptal',
               style: 'cancel',
             },
             {
-              text: 'End early',
+              text: 'Yarıda bırak',
               onPress: () => {
                 // Navigate to the 'Results' screen when the user chooses to end early
                 navigation.navigate('Results', {
@@ -122,7 +137,6 @@ import RippleButton from '../components/RippleButton';
       <View className="flex-1 items-center p-3 w-full relative">
         <View className="absolute top-0 bg-purple-500 h-1/4 w-full rounded-xl" />
         <View className="w-full px-6 py-[25%] gap-y-8">
-          {currentQuestionIndex < questions.length ? (
             <Question
               questions={questions}
               questionIndex={currentQuestionIndex}
@@ -131,16 +145,9 @@ import RippleButton from '../components/RippleButton';
               correctCount={correctCount}
               incorrectCount={incorrectCount}
             />
-          ) : (
-            <View>
-              <Text>Quiz Completed!</Text>
-              <Text>Correct Answers: {correctCount}</Text>
-              <Text>Incorrect Answers: {incorrectCount}</Text>
-            </View>
-          )}
           {showAnswer && (
           <View>
-            <RippleButton onPress={handleNextQuestion}>NEXT QUESTION</RippleButton>
+            <RippleButton onPress={handleNextQuestion}>SONRAKİ SORU</RippleButton>
           </View>
         )}
         </View>

@@ -25,17 +25,17 @@ export default function HomeScreen({ navigation }: { navigation: any }) {
   return (
     <SafeAreaView className="flex-1 items-center justify-center p-4 gap-y-4">
       <Text className="text-3xl">
-      <Text className="font-bold text-purple-600">Quizzaler</Text>'a Hoşgeldin!
+      <Text className="font-bold text-purple-600">Quizzler</Text>'a hoşgeldin!
       </Text>
       <TextInput
-        placeholder="Enter your name"
+        placeholder="Adını gir"
         value={userName}
         onChangeText={(text) => setUserName(text)}
         className="border-2 border-purple-500 p-2 rounded-lg w-3/4"
       />
       <View className='w-3/4'>
         <RippleButton onPress={handleStartQuiz} disabled={inputEmpty || loading}>
-          {loading ? <ActivityIndicator size="small" color="#ffffff" /> : 'Start Quiz'}
+          {loading ? <ActivityIndicator size="small" color="#ffffff" /> : 'Başla'}
         </RippleButton>
       </View>
     </SafeAreaView>

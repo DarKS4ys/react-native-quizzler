@@ -13,6 +13,7 @@ export default function ResultsScreen({ navigation, route }: { route: any, navig
 
   return (
     <SafeAreaView className='p-8 flex-1 justify-center items-center w-full gap-y-8'>
+      <Text className='font-medium'>{userName}</Text>
       <Text className='text-3xl font-bold'>Result Screen</Text>
       <View className="flex flex-wrap flex-row justify-between items-center w-full bg-white rounded-xl pb-6 pt-2 px-8">
         <View className="w-1/2 p-2 gap-y-4">

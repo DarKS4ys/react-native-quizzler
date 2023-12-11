@@ -121,7 +121,7 @@ import RippleButton from '../components/RippleButton';
     return (
       <View className="flex-1 items-center p-3 w-full relative">
         <View className="absolute top-0 bg-purple-500 h-1/4 w-full rounded-xl" />
-        <View className="w-full px-6 py-[30%] gap-y-8">
+        <View className="w-full px-6 py-[25%] gap-y-8">
           {currentQuestionIndex < questions.length ? (
             <Question
               questions={questions}
